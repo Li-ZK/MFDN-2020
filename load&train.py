@@ -87,6 +87,12 @@ def sampling(proptionVal, groundTruth):              #divide dataset into train 
     print(len(test_indices))
 
 
+def _init_():
+    if not os.path.exists('ckpt'):
+        os.makedirs('ckpt')
+    if not os.path.exists('Model'):
+        os.makedirs('Model')
+_init_()
 
 mat_data = sio.loadmat('dataset/IN/Indian_pines_corrected.mat')
 print(mat_data.keys())
